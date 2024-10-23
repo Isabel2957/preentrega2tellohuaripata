@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+$main-color: #16ADB8;
+$secondary-color: #F4A91A;
+$third-color: #F4F5F6;
+$fourth-color: #94725C;
+$fifth-color: #283039;
+$font-default:'Montserrat', sans-serif;
+$font-header:'Nunito', sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, 
+body {
+    font-family: $font-default;
+    color: $fifth-color;
+    background-color: $third-color;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+p {
+    font-size: 1rem;
+    margin: 5px 0;
+    line-height: 1.7em;
+}
+a {
+    text-decoration: none;
+}
+
+h1, 
+h2, 
+h5 {
+    font-family: $font-header;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+.text-big {
+    font-size: 3rem;
+}
+
+.button {
+    display: inline-block;
+    font-size: 15px;
+    padding: 15px 25px;
+    background: $secondary-color;
+    color: $third-color;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 26px;
+}
+.logo { 
+    font-size: 2rem;
+    font-weight: 700;
+    color: $secondary-color;
+    margin: 0 50px 0 0;
+}
+.logo span {
+    font-weight: 400;
+}
+.flex {
+    display: flex;
+}
+.space-between {
+    justify-content: space-between;
+}
+.align-items-center {
+    align-items: center;
+}
+img {
+    max-width: 100%;
+}
+.section-numbers {
+    background: $main-color;
+    color: $third-color;
+}
+.banner-text {
+    width: 55%;
+}
+.banner-image {
+    width: 40%;
+}
+.banner-image img {
+    border-radius: 15px;
+}
+.text-justify {
+    text-align: justify;
+}
+.menu-list a:not(.button) {
+    text-decoration: none;
+    color: $fifth-color;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.menu-list ul {
+    width: 100%;
+}
+.menu-list li {
+    list-style: none;
+}
+.navbar {
+    margin: 25px;
+}
+.menu-list a:hover:not(.button, .logo) {
+    color: #16ADB8;
+}
+.center {
+    text-align: center;
+}
+.section {
+    margin: 60px 0;
+}
