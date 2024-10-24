@@ -9,6 +9,22 @@ $fifth-color: #283039;
 $font-default:'Montserrat', sans-serif;
 $font-header:'Nunito', sans-serif;
 
+//Responsive
+
+$breakpoints: (
+    sm : 540px,
+    md : 855px,
+    lg : 1024px,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+    }
+}
+
+//Reset
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,23 +38,40 @@ body {
     background-color: $third-color;
 }
 
+//General
+
 h1 {
     font-size: 2.5rem;
+    margin-bottom: 10px;
+    @include media-up(sm) {
+        font-size: 2rem;
+    }
 }
 h2 {
     font-size: 2rem;
+    margin-bottom: 50px;
 }
 
 h5 {
     font-size: 1.2rem;
+    
 }
 p {
-    font-size: 1rem;
-    margin: 5px 0;
+    font-size: 1.1rem;
     line-height: 1.7em;
+    @include media-up(sm) {
+        font-size: 1rem;
+    }
 }
 a {
     text-decoration: none;
+    color: $fourth-color;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: $fifth-color;
 }
 
 h1, 
@@ -49,16 +82,30 @@ h5 {
 
 .container {
     max-width: 1110px;
-    margin: 0 auto;
-    padding: 0 30px;
+    margin: 0 auto 20px auto;
+    @include media-up(sm) {
+        padding: 0 15px;
+    }
 }
 .text-big {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    text-align: center;
+      
+}
+.text-banner {
+    font-size: 1.5rem;
+    @include media-up(sm) {
+        font-size: 1rem;
+    }
+}
+
+.text-banner span {
+    color: $fifth-color;
+    font-weight: 600;
 }
 
 .button {
     display: inline-block;
-    font-size: 15px;
     padding: 15px 25px;
     background: $secondary-color;
     color: $third-color;
@@ -66,18 +113,15 @@ h5 {
     letter-spacing: 1px;
     border: none;
     border-radius: 26px;
+    margin: 15px 0;
+
 }
-.logo { 
-    font-size: 2rem;
-    font-weight: 700;
-    color: $secondary-color;
-    margin: 0 50px 0 0;
-}
-.logo span {
-    font-weight: 400;
-}
+
 .flex {
     display: flex;
+}
+.flex-direction-column {
+    flex-direction: column;
 }
 .space-between {
     justify-content: space-between;
@@ -88,15 +132,43 @@ h5 {
 img {
     max-width: 100%;
 }
+.color-primary {
+    color: $main-color;
+}
+.color-secondary {
+    color: $secondary-color
+}
+.color-fourth{
+    color: $fourth-color;
+}
+
+//Home
+
 .section-numbers {
     background: $main-color;
     color: $third-color;
 }
+.numbers {
+    padding: 10px 0;
+    @include media-up(sm) {
+        flex-direction: column;
+    } 
+}
+.numbers p{
+    text-align: center;
+}
+
 .banner-text {
     width: 55%;
+    @include media-up(md) {
+        width: 100%;
+    }
 }
 .banner-image {
     width: 40%;
+    @include media-up(md) {
+        width: 100%;
+    }
 }
 .banner-image img {
     border-radius: 15px;
@@ -104,27 +176,206 @@ img {
 .text-justify {
     text-align: justify;
 }
-.menu-list a:not(.button) {
-    text-decoration: none;
-    color: $fifth-color;
-    font-weight: 600;
-    transition: 0.3s;
+
+.banner {
+    @include media-up(md) {
+        flex-direction: column;
+    }
 }
-.menu-list ul {
-    width: 100%;
-}
-.menu-list li {
-    list-style: none;
-}
-.navbar {
-    margin: 25px;
-}
-.menu-list a:hover:not(.button, .logo) {
-    color: #16ADB8;
-}
+
+
 .center {
     text-align: center;
 }
 .section {
     margin: 60px 0;
+
+    @include media-up(sm) {
+        margin: 50px 0;
+    }
+}
+
+.service {
+    margin: 0 10px;
+    padding: 20px;
+    text-align: center;
+    flex-basis: 31%;
+}
+
+.services i {
+    font-size: 4rem;
+    margin: 15px;
+}
+.services {
+    flex-wrap: wrap;
+    justify-content: center;
+    @include media-up(md) {
+        flex-direction: column;
+    }
+}
+.testimonials {
+    @include media-up(md) {
+        flex-direction: column;
+    }
+}
+.testimonial-img {
+    width: 80px;
+    margin-right: 20px;
+}
+.testimonial-img img {
+    border-radius: 100%;
+}
+.testimonial {
+    flex-basis: 50%;
+    margin: 0 20px;
+    height: 100%;
+    @include media-up(md) {
+        margin-bottom: 25px;
+    }
+}
+.testimonial-text {
+        font-style: italic;
+}
+.testimonial-text i{
+    font-size: 35px;
+    margin: 10px;
+}
+.info-author p {
+    font-size: 16px;
+    
+}
+.author-name {
+    font-weight: 700;
+}
+footer {
+    background-color: $main-color;
+    padding: 0 30px;
+}
+footer p {
+    font-size: 16px;
+    padding: 20px;
+    color: $third-color;
+    font-weight: 300;
+}
+footer .social-media a {
+    cursor: pointer;
+    font-size: 20px;
+    color: $third-color;
+    margin: 5px;
+}
+
+//Intern pages
+
+.section-banner-intern {
+    height: 300px;
+    margin: 0 auto;
+    color: $third-color;
+    background: rgb(148,114,92);
+background: linear-gradient(90deg, rgba(148,114,92,1) 0%, rgba(244,169,26,1) 35%, rgba(22,173,184,1) 100%);
+    @include media-up(sm) {
+        height: 200px;
+    }
+}
+.section-banner-intern h1 {
+    font-weight: 700;
+}
+
+//Menu hamburguer
+nav {
+    background-color: $third-color;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+nav a {
+    color: $fifth-color;
+    font-weight: 600;
+    transition: 0.3s;
+}
+nav a span {
+    font-weight: 400;
+}
+a.logo {
+    font-size: 35px;
+    line-height: 80px;
+    margin-left: 30px;
+    font-weight: 600;
+    @include media-up(md) {
+        font-size: 30px;
+    }
+    @include media-up(sm) {
+        margin-left: 15px;
+    }
+}
+
+nav ul {
+    float: right;
+    margin-right: 30px;
+    @include media-up(md) {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: $third-color;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    @include media-up(sm) {
+        margin-right: 15px;
+    }
+}
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    @include media-up(md) {
+        display: block;
+    }
+}
+nav ul li a {
+    padding: 7px 13px;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: $fifth-color;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    @include media-up(md) {
+        display: block;
+    }
+    @include media-up(sm) {
+        margin-right: 20px;
+    }
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ ul {
+    @include media-up(md) {
+        left: 0;
+    }
+}
+.btn-menu {
+    padding: 15px 25px;
+    background: $secondary-color;
+    color: $third-color;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 26px;
+    font-size: 15px;
+}
+nav a.active, nav a:hover:not(.logo, .btn-menu) {
+    color: $main-color;
 }
