@@ -4,44 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e7effdfddb.js" crossorigin="anonymous"></script>
     <link rel="icon" href="assets/images/header/favicon.png" type="image/x-icon">
     <title>The best development company | WebKITH</title>
 </head>
 <body>
     <nav class="navbar">
-        <div class="menu-list flex">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
             <a class="logo" href="#">
             Web<span>KITH</span>
             </a>
-            <ul class="flex space-between align-items-center">
-                <li>
-                <a href="#">Home</a>
-                </li>
-                <li>
-                <a href="pages/services.html">Services</a>
-                </li>
-                <li>
-                <a href="pages/projects.html">Projects</a>
-                </li>
-                <li>
-                <a href="pages/testimonials.html">Testimonials</a>
-                </li>
-                <li>
-                <a href="pages/about-us.html">Contact Us</a>
-                </li>
-                <li>
-                    <a href="pages/about-us.html" class="button">Free Consultation</a>
-                </li>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="pages/services.html">Services</a></li>
+                <li><a href="pages/projects.html">Projects</a></li>
+                <li><a href="pages/testimonials.html">Testimonials</a></li>
+                <li><a href="pages/about-us.html" class="btn-menu">Contact Us</a></li>
             </ul>
-        </div>
     </nav>
     <main>
         <div class="section section-banner">
             <div class="container">
-                <div class="banner flex space-between">
+                <div class="banner flex space-between ">
                     <div class="banner-text">
                         <h1>Your gateway to new opportunities</h1>
                         <p class="text-justify">We are a company dedicated to the creation of software tailored to your needs.
@@ -78,27 +65,31 @@
                 </div>
             </div>   
         </div>
-        <div class="section">
+        <div class="section section-services">
             <div class="container">
                 <h2 class="center">Services</h2>
                 <div class="services flex">
                         <div class="service">
-                            <img src="assets/images/home/services.webp" alt="no a real alt">
-                            <h5>Service 1</h5>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+                            <i class="fa-solid fa-laptop color-primary"></i>
+                            <h5>Web Design</h5>
+                            <p>You will get a free personal manager who will help to build a strategy, optimize the budget and deadline, organize the development process and launch the project. We love to create new solutions for all of our customers</p>
                         </div>
                         <div class="service">
-                            <img src="assets/images/home/services.webp" alt="no a real alt">
-                            <h5>Service 2</h5>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+                            <i class="fa-brands fa-searchengin color-secondary"></i>
+                            <h5>SEO Web Positioning</h5>
+                            <p>Combining marketing and technology, we provide a full range of services from the UI/UX design and web development to SEO and promotion.
+                                It’s great to work with honesty, transparency, trustworthy and law-abiding.
+                            </p>
                         </div>
                         <div class="service">
-                            <img src="assets/images/home/services.webp" alt="no a real alt">
-                            <h5>Service 3</h5>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+                            <i class="fa-regular fa-thumbs-up color-fourth"></i>
+                            <h5>Social Media Marketing</h5>
+                            <p>Not limited to standard methods. We use the horizontal a corporate culture that naturally encourages employees to be masters of innovations.
+                                Every website or app is secure and built on the latest versions of open source content
+                            </p>
                         </div>
                 </div>
-                <div class="container-button">
+                <div class="container-button center">
                         <a class="button" href="pages/services.html">View More</a>
                 </div>
             </div>                      
@@ -107,34 +98,48 @@
             <div class="container">
                 <h2 class="center">Testimonials</h2>
                 <div class="testimonials flex">
-                    <div class="testimonial"><p>Susana Ramos</p>
-                        <div class="testimonial-img">
-                            <img src="assets/images/testimonials/3577429.png" alt="no alt" class="testimonial-img">
+                    <div class="testimonial">
+                        <div class="testimonial-text">
+                            <p class="text-justify"><i class="fa-solid fa-quote-left color-primary"></i>Thank you to the guys at WebKITH digital marketing! If you are lucky enough to find them as I have then you are winning!</p>
                         </div>
+                        <div class="testimonial-user flex align-items-center">
+                            <div class="testimonial-img">
+                                <img src="assets/images/testimonials/testimonial2.jpg" alt="no alt" class="testimonial-img">
+                            </div>
+                            <div class="info-author">
+                                <p class="author-name color-primary">Robert Collins</p> 
+                                <p>Chief Manager at ABC</p>
+                            </div>
+                        </div>                          
                     </div>
-                    <div class="testimonial"><p>Roger Steven</p>
-                        <div class="testimonial-img">
-                            <img src="assets/images/testimonials/3577429.png" alt="no alt" class="testimonial-img">
+                    <div class="testimonial">
+                        <div class="testimonial-text">
+                            <p class="text-justify"><i class="fa-solid fa-quote-left color-primary"></i>WebKITH have provided us with a comprehensive, fast and well planned digital marketing strategy. It's the best option.</p>
                         </div>
-                    </div>
-                    <div class="testimonial"><p>Max Lizora</p>
-                        <div class="testimonial-img">
-                            <img src="assets/images/testimonials/3577429.png" alt="no alt" class="testimonial-img">
-                        </div>
+                        <div class="testimonial-user flex align-items-center">
+                            <div class="testimonial-img">
+                                <img src="assets/images/testimonials/testimonial1.jpg" alt="no alt" class="testimonial-img">
+                            </div>
+                            <div class="info-author">
+                                <p class="author-name color-primary">Zamantha Harvis</p> 
+                                <p>Administrator at 123</p>
+                            </div>
+                        </div>                          
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-            <li class="nav-item"><a href="pages/services.html" class="nav-link px-2 text-muted">Services</a></li>
-            <li class="nav-item"><a href="pages/projects.html" class="nav-link px-2 text-muted">Projects</a></li>
-            <li class="nav-item"><a href="pages/testimonials.html" class="nav-link px-2 text-muted">Testimonials</a></li>
-            <li class="nav-item"><a href="pages/about-us.html" class="nav-link px-2 text-muted">Contact Us</a></li>
-            </ul>
-            <p class="text-center text-muted">© 2024 Company, Inc</p>
+    <footer class="flex align-items-center space-between">
+        <div class="copyrght">
+            <p class="center">Copyright © 2024 WebKITH</p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://x.com/home" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>            
+        </div>
     </footer>
 </body>
 </html>

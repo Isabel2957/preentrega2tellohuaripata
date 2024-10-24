@@ -4,50 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/main.css" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="icon" href="../assets/images/header/logonew.webp" type="image/x-icon">
-    <title>About Us</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e7effdfddb.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../assets/images/header/favicon.png" type="image/x-icon">
+    <title>Contact Us | WebKITH</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
-            <img src="../assets/images/header/logonew.webp" alt="Bootstrap" width="70">
+    <nav class="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a class="logo" href="../index.html">
+            Web<span>KITH</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="services.html">Services</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="testimonials.html">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link active" href="#">Contact Us</a>
-                </li>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="about-us.html" class="btn-menu">Contact Us</a></li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            </div>
-        </div>
     </nav>
     <main>
+        <div class="section-banner-intern flex align-items-center">
+            <div class="container center">
+                <h1>Contact Us</h1>
+                <p class="text-banner">
+                    We Are At <span>Your Service</span>
+                </p>
+            </div>    
+        </div>
         <div class="section">
-            <h2 class="center">Contact Us</h2>
             <div>
                 <div>
                     <img src="assets/images/about-us/teamwork-and-team-building.png" alt="">
@@ -67,18 +54,16 @@
             </form>
         </div>
     </main>
-    <div class="container">
-        <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="../index.html" class="nav-link px-2 text-muted">Home</a></li>
-            <li class="nav-item"><a href="services.html" class="nav-link px-2 text-muted">Services</a></li>
-            <li class="nav-item"><a href="projects.html" class="nav-link px-2 text-muted">Projects</a></li>
-            <li class="nav-item"><a href="testimonials.html" class="nav-link px-2 text-muted">Testimonials</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Contact Us</a></li>
-            </ul>
-            <p class="text-center text-muted">© 2024 Company, Inc</p>
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <footer class="flex align-items-center space-between">
+        <div class="copyrght">
+            <p class="center">Copyright © 2024 WebKITH</p>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://x.com/home" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/" target="_blank"><i class="fa-brands fa-tiktok"></i></a>            
+        </div>
+    </footer>
 </body>
 </html>
