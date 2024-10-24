@@ -92,6 +92,7 @@ h5 {
     text-align: center;
       
 }
+
 .text-banner {
     font-size: 1.5rem;
     @include media-up(sm) {
@@ -140,6 +141,9 @@ img {
 }
 .color-fourth{
     color: $fourth-color;
+}
+.font-style-normal {
+    font-style: normal;
 }
 
 //Home
@@ -214,6 +218,7 @@ img {
     }
 }
 .testimonials {
+    flex-wrap: wrap;
     @include media-up(md) {
         flex-direction: column;
     }
@@ -226,7 +231,7 @@ img {
     border-radius: 100%;
 }
 .testimonial {
-    flex-basis: 50%;
+    flex-basis: 45%;
     margin: 0 20px;
     height: 100%;
     @include media-up(md) {
@@ -236,9 +241,14 @@ img {
 .testimonial-text {
         font-style: italic;
 }
+
 .testimonial-text i{
     font-size: 35px;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
+}
+
+.testimonial-text .icon-big {
+    font-size:3rem;
 }
 .info-author p {
     font-size: 16px;
@@ -247,9 +257,13 @@ img {
 .author-name {
     font-weight: 700;
 }
+
 footer {
     background-color: $main-color;
     padding: 0 30px;
+    @include media-up(md) {
+        flex-direction: column;
+    }
 }
 footer p {
     font-size: 16px;
@@ -278,6 +292,17 @@ background: linear-gradient(90deg, rgba(148,114,92,1) 0%, rgba(244,169,26,1) 35%
 }
 .section-banner-intern h1 {
     font-weight: 700;
+}
+
+//Testimonial
+.testimonials-page {
+    margin: 60px 0;
+}
+.testimonials-page .testimonial {
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 //Menu hamburguer
