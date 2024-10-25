@@ -37,23 +37,53 @@
             </div>    
         </div>
         <div class="container">
-            <div class="section">
-                <div>
-                    <div>
-                        <img src="assets/images/about-us/teamwork-and-team-building.png" alt="">
-                    </div>
-                    <div class="text-center">Call us now at <a href="tel:+51999999999">999-999-999</a> or email us directly at <a href="mailto:kith@gmail.com">kith@gmail.com</a>. to talk to our team and gain insight into how we may help you and what we do. You may also visit our website to address any further queries!</div>
-                </div>
-            </div>
-            <div class="section">
+            <div class="box-form">
+                <h2 class="center">Fill the Form</h2>
+                <p class="center">Call us now at <a href="tel:+51999999999">999-999-999</a> or email us directly at <a href="mailto:webkith@gmail.com">webkith@gmail.com</a>. to talk to our team and gain insight into how we may help you and what we do. You may also visit our website to address any further queries!</p>
                 <form action="">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="user_name" />
-                    <label for="mail">Email:</label>
-                    <input type="email" id="mail" name="user_mail" />
-                    <label for="msg">Message:</label>
-                    <textarea id="msg" name="user_message"></textarea>
-                    <button class="button button-secondary">Send</button>
+                    <div class="user-details flex flex-wrap space-between">
+                        <div class="input-box">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="user_name"  placeholder="Enter your name" required/>
+                        </div>
+                        <div class="input-box">
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" id="last-name" name="user_lastname" placeholder="Enter your last name" required/>
+                        </div>
+                        <div class="input-box">
+                            <label for="mail">Email:</label>
+                            <input type="email" id="mail" name="user_mail" placeholder="Enter your email" required/>
+                        </div>
+                        <div class="input-box">
+                            <label for="phone-number">Phone Number:</label>
+                            <input type="text"  id="phone-number" name="user_phonenumber" minlength="9" maxlength="10" required placeholder="Enter your phone number"/>
+                        </div>
+                    </div>
+                    
+                    <div class="gender-details">
+                        <input type="radio" name="gender" id="dot-1" checked>
+                        <input type="radio" name="gender" id="dot-2">
+                        <input type="radio" name="gender" id="dot-3">
+                        <label for="gender" class="negrita">Gender:</label>
+                        <div class="category flex space-between">
+                            <label for="dot-1" class="flex align-items-center">
+                                <span class="dot one"></span>
+                                <span class="gender">Female</span>
+                            </label>
+                            <label for="dot-2" class="flex align-items-center">
+                                <span class="dot two"></span>
+                                <span class="gender">Male</span>
+                            </label>
+                            <label for="dot-3" class="flex align-items-center">
+                                <span class="dot three"></span>
+                                <span class="gender">Non-Binary</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="box-button">
+                        <input type="submit" value="Contact Me" class="button">
+                    </div>
                 </form>
             </div>
         </div>

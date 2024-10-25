@@ -139,6 +139,9 @@ h5 {
 .align-items-center {
     align-items: center;
 }
+.flex-wrap {
+    flex-wrap: wrap;
+}
 img {
     max-width: 100%;
 }
@@ -220,14 +223,12 @@ img {
     margin: 15px;
 }
 .services {
-    flex-wrap: wrap;
     justify-content: center;
     @include media-up(md) {
         flex-direction: column;
     }
 }
 .testimonials {
-    flex-wrap: wrap;
     @include media-up(md) {
         flex-direction: column;
     }
@@ -316,7 +317,6 @@ background: linear-gradient(90deg, rgba(148,114,92,1) 0%, rgba(244,169,26,1) 35%
 //Projects
 
 .projects {
-    flex-wrap: wrap;
     @include media-up(sm) {
         flex-direction: column;
     }
@@ -385,6 +385,112 @@ background: linear-gradient(90deg, rgba(148,114,92,1) 0%, rgba(244,169,26,1) 35%
 .project .info p{
     margin-top: 8px;
     margin-bottom: 20px;
+}
+
+//Contact us
+
+.box-form {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 50px;
+    border-radius: 10px;
+    margin: 50px 0;
+    @include media-up(sm) {
+        padding: 15px;
+    }
+
+}
+.box-form form {
+    width: 80%;
+    margin: 50px auto 0 auto;
+    @include media-up(sm) {
+        width: 100%;
+    }
+}
+.box-form h2 {
+    position: relative;
+}
+
+.box-form h2::before {
+    content: '';
+    position: absolute;
+margin: 0 auto;
+bottom: 0;
+    height: 3px;
+    width: 40px;
+    background: linear-gradient(90deg, rgba(244,169,26,1) 35%, rgba(22,173,184,1) 100%);
+}
+.input-box {
+    flex-basis: 40%;
+    margin: 10px 0 12px 0;
+    @include media-up(md) {
+        flex-basis: 100%;
+    }
+}
+.user-details {
+    @include media-up(md) {
+        justify-content: center;
+    }
+}
+
+.user-details .input-box input {
+    height: 35px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid $fifth-color;
+    padding-left: 15px;
+    font-family: $font-default;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus, 
+.user-details .input-box input:valid {
+    border-color: #16ADB8;
+}
+.user-details .input-box label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+.box-form .button {
+    font-family: $font-default;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: block;
+    margin: 50px auto 10px auto;
+}
+.box-form .button:hover {
+    color: $fifth-color;
+    
+}
+.gender-details .category {
+    margin: 14px 0;
+    @include media-up(sm) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+}
+.gender-details  .negrita {
+    font-weight: 600;
+}
+.gender-details .category .dot {
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+    border-color: #d9d9d9;
+    background: $main-color;
+}
+form input[type="radio"]{
+    display: none;
 }
 
 //Menu hamburguer
