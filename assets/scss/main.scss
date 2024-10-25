@@ -115,7 +115,13 @@ h5 {
     border: none;
     border-radius: 26px;
     margin: 15px 0;
-
+}
+.button-secondary {
+    padding: 0.5rem 1rem;
+    background: $third-color;
+    color: $fifth-color;
+    transition: 0.4s ease-in-out;
+    border-radius: 26px;
 }
 
 .flex {
@@ -126,6 +132,9 @@ h5 {
 }
 .space-between {
     justify-content: space-between;
+}
+.space-around {
+    justify-content: space-around;
 }
 .align-items-center {
     align-items: center;
@@ -304,6 +313,79 @@ background: linear-gradient(90deg, rgba(148,114,92,1) 0%, rgba(244,169,26,1) 35%
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+//Projects
+
+.projects {
+    flex-wrap: wrap;
+    @include media-up(sm) {
+        flex-direction: column;
+    }
+}
+.project {
+    width: 330px;
+    height: 250px;
+    padding: 2rem 1rem;
+    position: relative;
+    align-items: flex-end;
+    box-shadow:  0px 7px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-in-out;
+    margin-bottom: 50px;
+    @include media-up(md) {
+        flex-basis: 40%;
+    }
+}
+.project:hover {
+    transform: translateY(20px);
+}
+.project:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,176,155,0.5), rgba(150,201,61,1));
+    z-index: 2;
+    transition: 0.5s all;
+    opacity: 0;
+}
+
+.project:hover:before {
+    opacity: 1;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.project .info {
+    position: relative;
+    z-index: 3;
+    color: $third-color;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.5s all;
+}
+
+.project:hover .info {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.project .info h2 {
+    margin: 0;
+}
+
+.project .info p{
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
 
 //Menu hamburguer
 nav {
@@ -314,6 +396,7 @@ nav {
     top: 0;
     overflow: hidden;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 5;
 }
 nav a {
     color: $fifth-color;
