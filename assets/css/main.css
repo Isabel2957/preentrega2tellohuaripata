@@ -128,6 +128,10 @@ h5 {
   align-items: center;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 img {
   max-width: 100%;
 }
@@ -224,7 +228,6 @@ img {
 }
 
 .services {
-  flex-wrap: wrap;
   justify-content: center;
 }
 @media screen and (max-width: 855px) {
@@ -233,9 +236,6 @@ img {
   }
 }
 
-.testimonials {
-  flex-wrap: wrap;
-}
 @media screen and (max-width: 855px) {
   .testimonials {
     flex-direction: column;
@@ -335,9 +335,6 @@ footer .social-media a {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.projects {
-  flex-wrap: wrap;
-}
 @media screen and (max-width: 540px) {
   .projects {
     flex-direction: column;
@@ -413,6 +410,128 @@ footer .social-media a {
 .project .info p {
   margin-top: 8px;
   margin-bottom: 20px;
+}
+
+.box-form {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 50px;
+  border-radius: 10px;
+  margin: 50px 0;
+}
+@media screen and (max-width: 540px) {
+  .box-form {
+    padding: 15px;
+  }
+}
+
+.box-form form {
+  width: 80%;
+  margin: 50px auto 0 auto;
+}
+@media screen and (max-width: 540px) {
+  .box-form form {
+    width: 100%;
+  }
+}
+
+.box-form h2 {
+  position: relative;
+}
+
+.box-form h2::before {
+  content: "";
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+  height: 3px;
+  width: 40px;
+  background: linear-gradient(90deg, rgb(244, 169, 26) 35%, rgb(22, 173, 184) 100%);
+}
+
+.input-box {
+  flex-basis: 40%;
+  margin: 10px 0 12px 0;
+}
+@media screen and (max-width: 855px) {
+  .input-box {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .user-details {
+    justify-content: center;
+  }
+}
+
+.user-details .input-box input {
+  height: 35px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #283039;
+  padding-left: 15px;
+  font-family: "Montserrat", sans-serif;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #16ADB8;
+}
+
+.user-details .input-box label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.box-form .button {
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  margin: 50px auto 10px auto;
+}
+
+.box-form .button:hover {
+  color: #283039;
+}
+
+.gender-details .category {
+  margin: 14px 0;
+}
+@media screen and (max-width: 540px) {
+  .gender-details .category {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.gender-details .negrita {
+  font-weight: 600;
+}
+
+.gender-details .category .dot {
+  height: 18px;
+  width: 18px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+  border-color: #d9d9d9;
+  background: #16ADB8;
+}
+
+form input[type=radio] {
+  display: none;
 }
 
 nav {
